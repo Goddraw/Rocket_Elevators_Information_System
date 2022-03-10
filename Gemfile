@@ -7,9 +7,6 @@ ruby '2.7.5'
 gem 'rails', '~> 5.2.6'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
-<<<<<<< HEAD
-gem 'mysql2'
-=======
 gem 'mysql2', '~> 0.5.3'
 gem 'jquery-rails'
 gem 'bootstrap-social-rails'
@@ -17,7 +14,6 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'font-awesome-sass', '~> 4.4.0'
 gem 'bootstrap_form', '~> 4.2'
 gem 'sprockets-rails', '2.3.3'
->>>>>>> 4a6c4134c330cd6fbde9ca2f6f14865bab6379b7
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
