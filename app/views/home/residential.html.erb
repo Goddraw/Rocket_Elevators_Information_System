@@ -1,7 +1,7 @@
 <%= render "shared/navigation" %>
 
 <!-- PAGE HEADER BREADCRUMBS -->
-<section class="page-header page-header-xs parallax parallax-3" style="background-image:url('assets/images/rocketElevators/imgpattern2.jpg')">
+<section class="page-header page-header-xs parallax parallax-3" style="background-image: url(<%= asset_path "rocketElevators/imgpattern2.jpg" %>)">
     <div class="overlay dark-2"></div>
     <div class="container">
         <h1><strong>RESIDENTIAL SERVICES</strong></h1>
@@ -18,7 +18,7 @@
 
 
 <!-- LAYER SLIDER -->
-<section>
+<%# <section>
     <div class="container slider">
         <div class="layerslider" style="height:500px;">
 
@@ -193,8 +193,41 @@
         </script>
 
     </div>
-</section>
+</section> %>
 <!-- /LAYER SLIDER -->
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active text-center">
+            <%# <img class="d-block w-100" src="..." alt="First slide"> %>
+            <%= image_tag "rocketElevators/resPortfolio1.jpeg", width: "1375", height:"550"%>
+        </div>
+        <div class="carousel-item text-center">
+            <%# <img class="d-block w-100" src="..." alt="Second slide"> %>
+            <%= image_tag "rocketElevators/resPortfolio4.jpeg", width: "1375", height:"550" %>
+        </div>
+        <div class="carousel-item text-center">
+            <%# <img class="d-block w-100" src="..." alt="Third slide"> %>
+            <%= image_tag "rocketElevators/resPortfolio7.jpg", width: "1375", height:"550" %>
+        </div>
+        <div class="carousel-item text-center">
+            <%# <img class="d-block w-100" src="..." alt="fourt slide"> %>
+            <%= image_tag "rocketElevators/resPortfolio8.png", width: "1375", height:"550" %>
+        </div>
+        <div class="carousel-item text-center">
+            <%# <img class="d-block w-100" src="..." alt="fifth slide"> %>
+            <%= image_tag "rocketElevators/resPortfolio9.jpg", width: "1375", height:"550" %>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
 
 
 <!-- BUSINESS MODEL -->
@@ -203,41 +236,34 @@
     <div class="container">
         <h2 class="m-0">What we deliver since <span style="color: rgb(170, 69, 69)">1976</span>...</h2>
         <p>
-            ... and why we are
-            <span class="word-rotator" data-delay="2000">
-                <span class="items" style="color: rgb(170, 69, 69); text-align: center">
-                    <span>trusted</span>
-                    <span>loved</span>
-                </span>
-            </span>
-            by our clients.
+            ... and why we are trusted by our clients.
         </p>
 
         <div class="row">
             <div class="col-md-3 col-6">
                 <div class="text-center">
-                    <i class="ico-light ico-lg ico-rounded ico-hover et-tools-2"></i>
+                    <i class="ico-light ico-lg ico-rounded ico-hover fa fa-wrench"></i>
                     <h4>24/7 Customer Support</h4>
                     <p>We are one phone call away. We are always ready to answer any questions, provide maintainance, repair services, and many more! </p>
                 </div>
             </div>
             <div class="col-md-3 col-6">
                 <div class="text-center">
-                    <i class="ico-light ico-lg ico-rounded ico-hover et-lightbulb"></i>
+                    <i class="ico-light ico-lg ico-rounded ico-hover fa fa-lightbulb-o"></i>
                     <h4>Innovative Design</h4>
                     <p>Our team is consisted of top-tier designers and architects ready to provide creative, innovative, and unique solutions.</p>
                 </div>
             </div>
             <div class="col-md-3 col-6">
                 <div class="text-center">
-                    <i class="ico-light ico-lg ico-rounded ico-hover et-puzzle"></i>
+                    <i class="ico-light ico-lg ico-rounded ico-hover fa fa-puzzle-piece"></i>
                     <h4>Custom Features</h4>
                     <p>Every building deserves a special touch. We work closely with our clients to deliver what is best for them.</p>
                 </div>
             </div>
             <div class="col-md-3 col-6">
                 <div class="text-center">
-                    <i class="ico-light ico-lg ico-rounded ico-hover et-shield"></i>
+                    <i class="ico-light ico-lg ico-rounded ico-hover fa fa-shield"></i>
                     <h4>Enhanced Safety</h4>
                     <p>Your safety is our priority, and we take it to the next level. Our highly-experienced engineers have developed state-of-the-art safety features to our elevators.</p>
                 </div>
@@ -250,7 +276,8 @@
 
 
 <!-- PARALLAX -->
-<section class="parallax parallax-2" style="background-image: url('assets/images/rocketElevators/homeSlider1.jpeg');">
+<section class="parallax parallax-1" style="background-image: url(<%= asset_path "rocketElevators/businessSince.jpeg" %>)">
+
     <div class="overlay dark-7"></div>
     <div class="container text-center">
         <div class="text-center">
@@ -259,6 +286,7 @@
                 * Offer valid until the Febuary 20th, 2022.
             </p>
             <a href="index.html#contact" class="btn btn-outline-primary btn-lg mt-30">CONTACT US <i class="fa fa-angle-right"></i></a>
+            '
         </div>
     </div>
 </section>
@@ -281,7 +309,7 @@
                             </p>
                             <div class="testimonial">
                                 <figure>
-                                    <img class="rounded" src="assets/images/rocketElevators/testi1.jpg"/>
+                                    <%= image_tag "rocketElevators/testi1.jpg", class:"rounded" %>
                                 </figure>
                                 <cite>                                    
                                     Hillary Clinton
@@ -299,7 +327,7 @@
                             </p>
                             <div class="testimonial">
                                 <figure>
-                                    <img class="rounded" src="assets/images/rocketElevators/testi2.jpg"/>
+                                    <%= image_tag "rocketElevators/testi2.jpg", class:"rounded" %>
                                 </figure>
                                 <cite>                                    
                                     Tony Stark
@@ -316,7 +344,7 @@
                             </p>
                             <div class="testimonial">
                                 <figure>
-                                    <img class="rounded" src="assets/images/rocketElevators/testi3.jpg"/>
+                                    <%= image_tag "rocketElevators/testi3.jpg", class:"rounded" %>
                                 </figure>
                                 <cite>                                    
                                     Mark Zuckerberg
